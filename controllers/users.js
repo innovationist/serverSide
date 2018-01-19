@@ -245,7 +245,7 @@ function login(_req,_res){
     newUser.email = _req.body.email;
     newUser.password = _req.body.password;
 
-    User.findOne({'email': newUser.email}, (err, user_details) =>{
+    User.find({'email': newUser.email}, (err, user_details) =>{
         
         if(err){
             console.log("an error occured");
