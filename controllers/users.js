@@ -238,6 +238,7 @@ function AddNewUser(_req,_res){
 
 
 //  users login complicated verification added.....
+//  users login complicated verification added.....
 function login(_req,_res){
 
     const newUser = new User();
@@ -245,7 +246,7 @@ function login(_req,_res){
     newUser.email = _req.body.email;
     newUser.password = _req.body.password;
 
-    User.find({'email': newUser.email}, (err, user_details) =>{
+    User.findOne({'email': newUser.email}, (err, user_details) =>{
         
         if(err){
             console.log("an error occured");
